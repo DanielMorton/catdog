@@ -15,8 +15,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.regularizers import l2
 
 BATCH = 50
-inputSize = 224
-TRAIN_DIR = './Documents/Cats and Dogs/train/'
+inputSize = 224'
 
 ## Data Augmentation.
 trainGen = ImageDataGenerator(
@@ -35,7 +34,7 @@ testgen = ImageDataGenerator(
         preprocessing_function=preprocess_input)
 
 ## Home directory path
-path = './Documents/Cats and Dogs/'
+path = './catdog/'
 
 ## Set training batches
 trainBatches = trainGen.flow_from_directory(path+'train', target_size=(inputSize, inputSize),
